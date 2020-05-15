@@ -22,7 +22,9 @@ service: sls-express-dynamodb
 
 custom:
   tableName: 'users-table-${self:provider.stage}'
-  dynamodb:   
+  dynamodb:
+    stages:
+      - dev
     start:          
       migrate: true    
 
